@@ -1,0 +1,17 @@
+<h1>Chat with your Coach</h1>
+
+<h2>You said:</h2>
+<p>
+  <% if @question.blank? %>
+      😶
+  <% else %>
+      <%= @question %>
+  <% end %>
+</p>
+
+<h2>Your Coach replied:</h2>
+<p>
+  <%= @answer %>
+</p>
+
+<%= link_to 'Ask a new Question', ask_path %>
